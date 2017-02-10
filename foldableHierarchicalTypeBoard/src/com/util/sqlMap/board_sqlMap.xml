@@ -115,10 +115,7 @@
 		(select * from bbs where groupNum=#groupNum# and orderNo<#orderNo# and depth=#depth# 
 		order by orderNo desc) data
 		where rownum = 1 ) 
-		and orderNo>(select data.orderNo from
-		(select * from bbs where groupNum=#groupNum# and orderNo<#orderNo# and depth=#depth# 
-		order by orderNo desc) data
-		where rownum = 1 )
+		and orderNo>#orderNo#
 	]]>	
 	</select>
 	
